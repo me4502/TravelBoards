@@ -31,7 +31,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = False
 
-DIRECT_TEMPLATES = ['index']
+DIRECT_TEMPLATES = ['index', 'people']
 
 THEME = "theme"
 
