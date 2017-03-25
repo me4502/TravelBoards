@@ -7,16 +7,16 @@
     border: none;
     box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
     border-radius: 50%;
-    background-color: #F44336;
     background-size:cover;
-    background-repeat: no-repeat;
+    background: #F44336 no-repeat;
     cursor: pointer;
 }
 
 .pulse-pause {
     -webkit-animation: none;
     -moz-animation: none;
-    -ms-animation: none;animation: none;
+    -ms-animation: none;
+    animation: none;
 }
 
 .pulse-active {
