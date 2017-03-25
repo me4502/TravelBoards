@@ -49,7 +49,8 @@
             <p>16</p>
             <p>Thu</p>
         </div>
-        <div class="col s1 timeline-box hoverable" onclick="$('#fri-modal').modal('open');">
+        <div class="col s1 timeline-box hoverable"
+             onclick="$('#fri-modal').modal('open');">
             <p>17</p>
             <p>Fri</p>
         </div>
@@ -85,15 +86,16 @@
             <p>A bunch of text</p>
         </div>
         <div class="modal-footer">
-            <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#"
+               class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
 
     <script>
-    $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal').modal();
-      });
+        $(document).ready(function () {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
     </script>
 
 </div>
