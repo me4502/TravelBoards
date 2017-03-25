@@ -59,8 +59,8 @@
     </div>
 
     <div style="float: right;">
-        <button class="btn waves-effect waves-light" type="submit"
-                name="action">Next
+        <button class="btn waves-effect waves-light accent-color" type="submit"
+                name="action" onclick="window.location.href = 'budget.html';">Next
             <i class="material-icons right">send</i>
         </button>
     </div>
@@ -68,11 +68,7 @@
     <script>
         function modifyPeople(id, modifier) {
             var par = $("#" + id);
-            var result = Math.max(parseInt(par.html()) + modifier, 0);
-            if (id === "adult-count") {
-                result = Math.max(result, 1);
-            }
-            par.html(result);
+            par.html(Math.max(parseInt(par.html()) + modifier, 0));
         }
     </script>
 
