@@ -1,13 +1,15 @@
 $(document).ready(function() {
-    $("body").css("display", "none");
-    $("body").fadeIn(1000);
+    var body = $("body");
+
+    body.css("display", "none");
+    body.fadeIn(1000);
     $(".transition").click(function(event){
         event.preventDefault();
-        linkLocation = this.name;
-        $("body").fadeOut(1000, redirectPage);
+        var linkLocation = this.name;
+        $("body").fadeOut(1000, redirectPage(linkLocation));
     });
 
-    function redirectPage() {
+    function redirectPage(linkLocation) {
         window.location = linkLocation;
     }
 });
