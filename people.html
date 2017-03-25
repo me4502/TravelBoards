@@ -17,6 +17,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+<script src="https://use.fontawesome.com/5783f88873.js"></script>
+
 </head>
 
 <body>
@@ -26,10 +28,11 @@
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
-                    <img src="img/adult.png">
+                    <i class="fa fa-male" aria-hidden="true"></i>
                     <span class="card-title">Adults</span>
                 </div>
                 <div class="card-content">
+                    <p>Adults: </p>
                     <p id="adult-count">1</p>
                 </div>
                 <div class="card-action">
@@ -42,10 +45,11 @@
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
-                    <img src="img/child.png">
+                    <i class="fa fa-child" aria-hidden="true"></i>
                     <span class="card-title">Children</span>
                 </div>
                 <div class="card-content">
+                    <p>Children: </p>
                     <p id="child-count">0</p>
                 </div>
                 <div class="card-action">
@@ -58,11 +62,12 @@
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
-                    <img src="img/infant.png">
+                    <img class="icon icons8-Baby-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAHgElEQVR4Xu2dj9HeNAzG1QmACYAJgAkKEwATABPQTgCdAJgAmACYAJgAmACYgHaC9n69+EhDEku2LCtHfNf7rvc6jq3H+i87D+RuqSjwINVs7snIVQF5V0Q+ERH+vr78Bc7fReSpiPwiIj8t/78UzFcDBBC+FJG3lFT+a+n/vbL/9G5XAQQAvhWR9xspBsd8JiIAlLpdARBA+GERTT3ERJR9kF2MZQcEMH7uQWHn2fcyg5IZEMTUbw6cscUETgGUlOIrMyBwRqvOqDEVOgXxla5lBeTTRYmPJNjHIvLjyBe0jJ0VkD8Npm3LunkGkfV268OjnssICM4euiOipVPwGQH5WkQ+j0BDRJ4sjmPQ6+qvyQgICvdhfeouPX4daDg0TTAjIIgrxFZEI/aF2ErTMgLyPJg6qWiQajILEDcgwTuy9jrEyDu1Tk6//xEoHlVTzsght1JXQRfX6TZ742itetPtGKrIFNuJsMabg1/5d0B4xryEjDqERdzBRTOU4x8YqdzTeeiFnFk5hPmRoMIEfs0Z+2eLqXsnqBoIe6dwG4g2+hFAIZHUyylwBmPBdWlbZpG1Jhri67uOKDA6A0MhpZhaL/QqgJQ5Q1QK5bQmMabto4yp2iMWvRogZR04jx8tIohS0hL7IjZVSkkRc6nF0x4oWQGhZBSCQ3ht2ahWLyC2AArA0pWYZgMEpUvJqDcIR2ABDiWm+DwpWiZAvlrk/QzCoJfIr09vGQCBG6jdjUrbHhEdMUat1lRLbDYgWE1wBoo5Q8MgQIRNK6CbBQgAAASAZGz4PI8Xiy10fjMAQTShuGeLqBqhEWFwS6jpHA0IBXBkBK/SEGEo/G+iJhwFCCIKrsC3uGJDp8AtADS0RQAS7VuMIhjWF1bYUBE2GpAvstXOOqBFbGyYCBsFCCIK32LUgRsHunYNgWcPt7iLsBGAoCfQF1l8iy7KnzwMGIDiGnbxBmRm+GMU4WvjuoZdvADJEv6oEW/U727n4D0A+b+IqBqYLmGXHkBGhD9ItUYd1ikE9n4nji9hl6bWCghgcGzZM/zBIljMjOMImLLoP6+Gr8Kxa7MV1gqI5ykn8t6IveJwzQAEINhceOTafH0NvKbTWS2AeO4mUqiMt95JswCBwHA+XEoK2aMRbiFyrG4tgHiUeFIjReh9L+8wE5BCODgWQvbWgplLVlsA6SUYlSEs+Cgz1zu+ejcuHY9ogCnPhuk9zWWisanzsoAegmnOhfeMbwWD/jUa4PgRk2tttfFfGdfUeXmy5QwgihsRpQkzZAOEZROTQ4RZFb75DGMLIFalzt2HgKExARET3HMS2TBPNRsFhQ8oHxomF6LUmY+GS1DcsLslQ8iCvSwcLd2w9Cy5fTYk66opfDN3aOTn0aLYLeyqI4XHZFikJZnDmP9oqejcj1uBLOU/+CxsnrP1I+Y0UqFbh6wHgOjsmHVtLRxhsr2XAXuVZw9GGmNjb3zP9b8cv0WH9Cz87NntHVlm+WuY2PYMIzsZLjHvaMM7VV2zALIlEPpndIIL4q/1wMgNoAIjE4dsY2OtIkS98EUxr/2LFDfMZeCQvXOEbwSIjz0jQmsCW4A39c0AyNbUtZqhpgVvOm/fPf220tmA7DmCVhO0B5DZ7//P3GcDsr1oJtra2busOZJDUwGCDMfU3VpTLrlpBduc1QJE6LDdKc7kEArpzmp93So5NivXfGmBsDs1V+FtFiAAASCaVqrPe502OJHqe8bTtCk3X88A5EhUnREJMNA3yHdLzIkx4QiAwPm0OJvR+uzl+mcAUhNVtd2LOEGckR49Cl4S/KOcCB+n5whEuOiKBsQiqmrARP0eKroiAWkRVVFEr4nLsMBjJCC9omomOGG+SRQgHqKqZCABBt2Asj5LEKH8S2pWk+GrAR4S54oABFFFNLfnuozeu65Q8oBTS7uegQLA3BPfa36fAh8BSG8msCUdvLdojzqr4WmBCEDIk1vs/zUxAaMpN32wDWu1ADWxBXcQVhnWIgBprbPaq/v1IkRPdctQmg0dfKGepmRoS+gIq6blSvOm0h7LLooAxHqzKEeOqWSJaFb9NtzSigAEwhKC0Fb8RcWQrNYfFZg9YRjVBosChMUjurS1sU2HXVQr/reT5cOV1CZjOg81eaODi9avHqB4Kc0Z0Sz6o9cHMs0/ikPKpKyX7Jdzh6ZFVTpb5xBarxUNCLSympyeH3+ESxFVWr8owtp7Zf/MAMTqnHkpeasS93ZKVVw+AxAmZo0teSh5ixIP1RtrpGYBwhyssrzHP7H6G6FJqSyAMA+LtUP/FkJZQ/89wKvE0lmnmRxS5mUJraBPUPLaQgdrlnJ4aKSGWAZAIBoE1uYqLPW3Vr1BiH6485edQ5ifNd6liSlZHVFP87rGCIe/Z+CQMjnL6V6Nf2DRTyMc0CZQMgFicRo1V1ZorwDRgNtE3JaHsgGidRq9AJni/F1Bh6znqAFFE1+q+TnpwIAI2TikAHN2a4JFxBzFzSy3S7RInuZnsgJSFoT1hbLHYsI0hsDWM/BwCv/KhypR9pqrNJqJ2vNgdkB61nbJZ29AksH2AiNZdHSLxqPDAAAAAElFTkSuQmCC" width="100" height="100">
                     <span class="card-title">Infants</span>
                 </div>
                 <div class="card-content">
-                    <p id="adult-count">0</p>
+                    <p>Infants: </p>
+                    <p id="infant-count">0</p>
                 </div>
                 <div class="card-action">
                     <a href="#"
@@ -76,7 +81,7 @@
     <script>
         function modifyPeople(id, modifier) {
             var par = $("#" + id);
-            par.html(parseInt(par.html()) + modifier)
+            par.html(Math.max(parseInt(par.html()) + modifier, 0));
         }
     </script>
 
