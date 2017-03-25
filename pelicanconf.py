@@ -31,9 +31,10 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = False
 
-DIRECT_TEMPLATES = ['index', 'people', 'map', 'budget', 'timeline', 'itinerary', 'xp-category', 'xp-choose']
+DIRECT_TEMPLATES = ['index', 'people', 'map', 'budget', 'timeline',
+                    'itinerary', 'xp-category', 'xp-choose']
 
 THEME = "theme"
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
