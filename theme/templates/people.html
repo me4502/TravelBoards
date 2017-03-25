@@ -11,8 +11,8 @@
                 </div>
                 <div class="card-action center-align">
                     <a href="#"
-                       onclick="modifyPeople('adult-count', 1);">Add</a>
-                    <a href="#" onclick="modifyPeople('adult-count', -1);">Remove</a>
+                       onclick="modifyPeople('adult-count', 1);" style="margin-right: 4px;">Add</a>
+                    <a href="#" onclick="modifyPeople('adult-count', -1);" style="margin-right: 0;">Remove</a>
                 </div>
             </div>
         </div>
@@ -24,8 +24,8 @@
                 </div>
                 <div class="card-action center-align">
                     <a href="#"
-                       onclick="modifyPeople('child-count', 1);">Add</a>
-                    <a href="#" onclick="modifyPeople('child-count', -1);">Remove</a>
+                       onclick="modifyPeople('child-count', 1);" style="margin-right: 4px;">Add</a>
+                    <a href="#" onclick="modifyPeople('child-count', -1);" style="margin-right: 0;">Remove</a>
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@
                 </div>
                 <div class="card-action center-align">
                     <a href="#"
-                       onclick="modifyPeople('infant-count', 1);">Add</a>
-                    <a href="#" onclick="modifyPeople('infant-count', -1);">Remove</a>
+                       onclick="modifyPeople('infant-count', 1);" style="margin-right: 4px;">Add</a>
+                    <a href="#" onclick="modifyPeople('infant-count', -1);" style="margin-right: 0;">Remove</a>
                 </div>
             </div>
         </div>
@@ -47,7 +47,11 @@
     <script>
         function modifyPeople(id, modifier) {
             var par = $("#" + id);
-            par.html(Math.max(parseInt(par.html()) + modifier, 0));
+            var result = Math.max(parseInt(par.html()) + modifier, 0);
+            if (id === "adult-count") {
+                result = Math.max(result, 1);
+            }
+            par.html(result);
         }
     </script>
 
