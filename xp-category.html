@@ -28,14 +28,19 @@
 
 <body class="default-primary-color flex-vert">
 <div class="container">
+<link rel="stylesheet" href="theme/css/pulse-pin.css">
+<div class="row card hoverable our-title">
+    <span class="card-title map">Choose some generic things that interest you</span> <br>
+    <p class="map">Our machine learning algorithm will later suggest some specific destinations based on these.</p>
+</div>
 
 <div class="row">
-    <div class="col s4">
+    <div class="col s4">h
         <div class="card hoverable">
             <div class="card-content center-align">
-                <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
                 <br><br>
-                <p>Value</p>
+                <p>Flights</p>
             </div>
             <div class="card-action center-align">
                 <a href="#" id="value" style="margin-right: 0;">Choose</a>
@@ -45,10 +50,9 @@
     <div class="col s4">
         <div class="card hoverable">
             <div class="card-content center-align">
-                <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
-                    class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-ship fa-3x" aria-hidden="true"></i>
                 <br><br>
-                <p>Moderate</p>
+                <p>Cruises</p>
             </div>
             <div class="card-action center-align">
                 <a href="#" id="moderate" style="margin-right: 0;">Choose</a>
@@ -58,11 +62,9 @@
     <div class="col s4">
         <div class="card hoverable">
             <div class="card-content center-align">
-                <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
-                    class="fa fa-usd fa-3x" aria-hidden="true"></i><i
-                    class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
                 <br><br>
-                <p>Luxury</p>
+                <p>Accommodation</p>
             </div>
             <div class="card-action center-align">
                 <a href="#" id="luxury" style="margin-right: 0;">Choose</a>
@@ -72,34 +74,18 @@
 </div>
 
 <div class="right">
-    <button class="btn waves-effect waves-light accent-color transition" type="submit" name="itinerary.html">
-        Choose experiences
+    <button class="btn waves-effect waves-light accent-color transition" type="submit" name="people.html">
+        Next
         <i class="material-icons right">send</i>
     </button>
 </div>
 
 <div class="left">
-    <button class="btn waves-effect waves-light accent-color transition" type="submit" name="people.html">
+    <button class="btn waves-effect waves-light accent-color transition" type="submit" name="map.html">
         Previous
         <i class="icon-flipped material-icons left">send</i>
     </button>
 </div>
-
-<script>
-    var delay = 800;
-    $(document).ready(function() {
-        $("a[id=luxury]").click(function(event){
-            $("#moderate, #value").parent().parent().fadeOut(delay, function(){ $(this).remove();});
-        });
-        $("a[id=moderate]").click(function(event){
-            $("#luxury, #value").parent().parent().fadeOut(delay, function(){ $(this).remove();});
-        });
-        $("a[id=value]").click(function(event){
-            $("#moderate, #luxury").parent().parent().fadeOut(delay, function(){ $(this).remove();});
-        });
-    });
-</script>
-
 
 </div>
 
