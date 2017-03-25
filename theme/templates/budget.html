@@ -10,8 +10,8 @@
                 <br><br>
                 <p>Value</p>
             </div>
-            <div class="card-action center-align" id="value">
-                <a href="#" style="margin-right: 0;">Choose</a>
+            <div class="card-action center-align">
+                <a href="#" id="value" style="margin-right: 0;">Choose</a>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
                 <br><br>
                 <p>Moderate</p>
             </div>
-            <div class="card-action center-align" id="moderate">
-                <a href="#" style="margin-right: 0;">Choose</a>
+            <div class="card-action center-align">
+                <a href="#" id="moderate" style="margin-right: 0;">Choose</a>
             </div>
         </div>
     </div>
@@ -37,11 +37,18 @@
                 <br><br>
                 <p>Luxury</p>
             </div>
-            <div class="card-action center-align" id="luxury">
-                <a href="#" style="margin-right: 0;">Choose</a>
+            <div class="card-action center-align">
+                <a href="#" id="luxury" style="margin-right: 0;">Choose</a>
             </div>
         </div>
     </div>
+</div>
+
+<div class="right">
+    <button class="btn waves-effect waves-light accent-color transition" type="submit" name="itinerary.html">
+        Choose experiences
+        <i class="material-icons right">send</i>
+    </button>
 </div>
 
 <div class="left">
@@ -52,19 +59,18 @@
 </div>
 
 <script>
+    var delay = 800;
     $(document).ready(function() {
-        $("#luxury").click(function(event){
-            $("#moderate, #value").fadeOut(500, function(){ $(this).parent().remove();});
+        $("a[id=luxury]").click(function(event){
+            $("#moderate, #value").parent().parent().fadeOut(delay, function(){ $(this).remove();});
         });
-        $("#moderate").click(function(event){
-            $("#luxury, #value").fadeOut(500, function(){ $(this).parent().remove();});
+        $("a[id=moderate]").click(function(event){
+            $("#luxury, #value").parent().parent().fadeOut(delay, function(){ $(this).remove();});
         });
-        $("#value").click(function(event){
-            $("#moderate, #luxury").fadeOut(500, function(){ $(this).parent().remove();});
+        $("a[id=value]").click(function(event){
+            $("#moderate, #luxury").parent().parent().fadeOut(delay, function(){ $(this).remove();});
         });
     });
-
-
 </script>
 
 
