@@ -2,45 +2,70 @@
 
 {% block content %}
 
-    <div class="row">
-        <div class="col s4">
-            <div class="card hoverable">
-                <div class="card-content center-align">
-                    <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
-                    <br><br>
-                    <p>Value</p>
-                </div>
-                <div class="card-action center-align">
-                    <a href="#" style="margin-right: 0;">Choose</a>
-                </div>
+<div class="row">
+    <div class="col s4">
+        <div class="card hoverable">
+            <div class="card-content center-align">
+                <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                <br><br>
+                <p>Value</p>
             </div>
-        </div>
-        <div class="col s4">
-            <div class="card hoverable">
-                <div class="card-content center-align">
-                    <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
-                        class="fa fa-usd fa-3x" aria-hidden="true"></i>
-                    <br><br>
-                    <p>Moderate</p>
-                </div>
-                <div class="card-action center-align">
-                    <a href="#" style="margin-right: 0;">Choose</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s4">
-            <div class="card hoverable">
-                <div class="card-content center-align">
-                    <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
-                        class="fa fa-usd fa-3x" aria-hidden="true"></i><i
-                        class="fa fa-usd fa-3x" aria-hidden="true"></i>
-                    <br><br>
-                    <p>Luxury</p>
-                </div>
-                <div class="card-action center-align">
-                    <a href="#" style="margin-right: 0;">Choose</a>
-                </div>
+            <div class="card-action center-align" id="value">
+                <a href="#" style="margin-right: 0;">Choose</a>
             </div>
         </div>
     </div>
+    <div class="col s4">
+        <div class="card hoverable">
+            <div class="card-content center-align">
+                <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
+                    class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                <br><br>
+                <p>Moderate</p>
+            </div>
+            <div class="card-action center-align" id="moderate">
+                <a href="#" style="margin-right: 0;">Choose</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s4">
+        <div class="card hoverable">
+            <div class="card-content center-align">
+                <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
+                    class="fa fa-usd fa-3x" aria-hidden="true"></i><i
+                    class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                <br><br>
+                <p>Luxury</p>
+            </div>
+            <div class="card-action center-align" id="luxury">
+                <a href="#" style="margin-right: 0;">Choose</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="left">
+    <button class="btn waves-effect waves-light accent-color transition" type="submit" name="people.html">
+        Previous
+        <i class="icon-flipped material-icons left">send</i>
+    </button>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#luxury").click(function(event){
+            $("#moderate, #value").fadeOut(500, function(){ $(this).parent().remove();});
+        });
+        $("#moderate").click(function(event){
+            $("#luxury, #value").fadeOut(500, function(){ $(this).parent().remove();});
+        });
+        $("#value").click(function(event){
+            $("#moderate, #luxury").fadeOut(500, function(){ $(this).parent().remove();});
+        });
+    });
+
+
+</script>
+
+
 {% endblock content %}
