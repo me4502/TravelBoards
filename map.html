@@ -61,7 +61,7 @@
     $(document).click(function(e) {
             document.getElementById("pulse-button").className =
                 document.getElementById("pulse-button").className.replace
-                ( /(?:^|\s)hidden(?!\S)/g , '' )
+                ( /(?:^|\s)hidden(?!\S)/g , '' );
             document.getElementById("pulse-button").className += " pulse-active";
 
             var d = document.getElementById('pulse-button');
