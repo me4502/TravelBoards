@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TravelBoards</title>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TravelBoard">
+<meta name="author" content="TravelBoard">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+    <div class="row">
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/adult.png">
+                    <span class="card-title">Adults</span>
+                </div>
+                <div class="card-content">
+                    <p id="adult-count">1</p>
+                </div>
+                <div class="card-action">
+                    <a href="#"
+                       onclick="modifyPeople('adult-count', 1);">Add</a>
+                    <a href="#" onclick="modifyPeople('adult-count', -1);">Remove</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/child.png">
+                    <span class="card-title">Children</span>
+                </div>
+                <div class="card-content">
+                    <p id="child-count">0</p>
+                </div>
+                <div class="card-action">
+                    <a href="#"
+                       onclick="modifyPeople('child-count', 1);">Add</a>
+                    <a href="#" onclick="modifyPeople('child-count', -1);">Remove</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/infant.png">
+                    <span class="card-title">Infants</span>
+                </div>
+                <div class="card-content">
+                    <p id="adult-count">0</p>
+                </div>
+                <div class="card-action">
+                    <a href="#"
+                       onclick="modifyPeople('infant-count', 1);">Add</a>
+                    <a href="#" onclick="modifyPeople('infant-count', -1);">Remove</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function modifyPeople(id, modifier) {
+            var par = $("#" + id);
+            par.html(parseInt(par.html()) + modifier)
+        }
+    </script>
+
+    </div>
+
+</body>
+</html>
