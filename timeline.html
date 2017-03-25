@@ -11,14 +11,15 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
 <link rel="stylesheet" href="theme/css/main.css">
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script src="https://use.fontawesome.com/5783f88873.js"></script>
 
@@ -27,7 +28,73 @@
 <body class="default-primary-color flex-vert">
 <div class="container">
 
+    <div class="row">
+        <div class="col s1 timeline-box">
+            <p>12</p>
+            <p>Sun</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>13</p>
+            <p>Mon</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>14</p>
+            <p>Tue</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>15</p>
+            <p>Wed</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>16</p>
+            <p>Thu</p>
+        </div>
+        <div class="col s1 timeline-box" onclick="$('#fri-modal').modal('open');">
+            <p>17</p>
+            <p>Fri</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>18</p>
+            <p>Sat</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>19</p>
+            <p>Sun</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>20</p>
+            <p>Mon</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>21</p>
+            <p>Tue</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>22</p>
+            <p>Wed</p>
+        </div>
+        <div class="col s1 timeline-box">
+            <p>23</p>
+            <p>Thu</p>
+        </div>
+    </div>
 
+    <div id="fri-modal" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Friday the 17th</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+      });
+    </script>
 
 </div>
 
