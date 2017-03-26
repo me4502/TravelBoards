@@ -27,11 +27,13 @@ body {
     height: 160px;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    align-content: center;
 }
 
 .cloud-row {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    align-content: center;
 }
 
 a {
