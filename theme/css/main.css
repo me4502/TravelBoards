@@ -93,5 +93,5 @@ img.logo {
 
 .box-text-bg {
     color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px #000000;
 }
