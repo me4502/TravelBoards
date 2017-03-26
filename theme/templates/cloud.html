@@ -2,6 +2,33 @@
 
 {% block content %}
 
+{% for item_row in CLOUD_PHOTOS | batch(6, none) %}
+    {% set outer_loop_index = loop.index - 1 %}
+    <div class='row' hidden>
+    </div>
+    <div class='row'>
+        {% for item in item_row %}
+            {% if item is not none %}
+                <div class="col s2">
+                    <img src="theme/img/{{ item }}" class="full-width" onclick="$('#{{ item }}').modal('open');">
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endfor %}
+    
+<div id="fri-modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Friday the 17th</h4>
+        <p>3rd day of a 7 day cruise from Punta Arenas to Antarctica</p>
+        <img src="theme/img/cruise_snow.jpg" class="full-width">
+    </div>
+    <div class="modal-footer">
+        <a href="#"
+           class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
 
 <div class="right">
     <button class="btn waves-effect waves-light accent-color transition" type="submit" name="timeline.html">

@@ -24,6 +24,13 @@ DEFAULT_PAGINATION = False
 DIRECT_TEMPLATES = ['index', 'people', 'map', 'budget', 'timeline',
                     'itinerary', 'xp-choose', 'cloud']
 
+CLOUD_PHOTOS = [
+    'cloud_1.jpg', 'cloud_2.jpg', 'cloud_3.jpg', 'cloud_4.jpg', 'cloud_5.jpg',
+    'cloud_6.jpg', 'cloud_7.jpg', 'cloud_8.jpg', 'cloud_9.jpg', 'cloud_10.jpg',
+    'cloud_11.jpg', 'cloud_12.jpg', 'cloud_13.jpg', 'cloud_14.jpg',
+    'cloud_15.jpg', 'cloud_16.jpg', 'cloud_17.jpg', 'cloud_18.jpg'
+]
+
 THEME = "theme"
 
 # Uncomment following line if you want document-relative URLs when developing
