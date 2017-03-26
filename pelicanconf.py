@@ -22,7 +22,7 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = False
 
 DIRECT_TEMPLATES = ['index', 'people', 'map', 'budget', 'timeline',
-                    'itinerary', 'xp-choose', 'cloud']
+                    'itinerary', 'xp-choose', 'cloud', 'thanks']
 
 CLOUD_PHOTOS = [
     'cloud_1.jpg', 'cloud_2.jpg', 'cloud_3.jpg', 'cloud_4.jpg', 'cloud_5.jpg',
