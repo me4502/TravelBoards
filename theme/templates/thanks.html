@@ -3,11 +3,13 @@
 {% block content %}
 <link rel="stylesheet" href="theme/css/pulse-pin.css">
 <div class="row card hoverable our-title">
-    <span class="card-title map">Pick an area of interest</span>
+    <span class="card-title map">Thanks for booking</span>
+    <p class="map">A link to your travel board has been emailed to you.
+        Download our app to view it even without a data connection.</p>
+    <img src="theme/img/qr.png">
 </div>
 
 <div class="row card hoverable map-container">
-    <img class="full-width map" src="theme/img/map.png">
 </div>
 
 <div class="left">
@@ -16,27 +18,5 @@
         <i class="icon-flipped material-icons left">send</i>
     </button>
 </div>
-
-<div class="container">
-    <button class="pulse-button pulse-active hidden" id="pulse-button"></button>
-</div>
-
-<script>
-    $(document).click(function (e) {
-        document.getElementById("pulse-button").className =
-            document.getElementById("pulse-button").className.replace
-            (/(?:^|\s)hidden(?!\S)/g, '');
-        document.getElementById("pulse-button").className += " pulse-active";
-
-        var d = document.getElementById('pulse-button');
-        d.style.position = "absolute";
-        d.style.left = e.pageX - 15 + 'px';
-        d.style.top = e.pageY - 15 + 'px';
-    });
-
-    $(document).dblclick(function (e) {
-        document.getElementById("pulse-button").className += " pulse-pause hidden";
-    });
-</script>
 
 {% endblock content %}
