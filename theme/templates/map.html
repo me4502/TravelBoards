@@ -31,20 +31,20 @@
 </div>
 
 <script>
-    $(document).click(function(e) {
-            document.getElementById("pulse-button").className =
-                document.getElementById("pulse-button").className.replace
-                ( /(?:^|\s)hidden(?!\S)/g , '' );
-            document.getElementById("pulse-button").className += " pulse-active";
+    $(document).click(function (e) {
+        document.getElementById("pulse-button").className =
+            document.getElementById("pulse-button").className.replace
+            (/(?:^|\s)hidden(?!\S)/g, '');
+        document.getElementById("pulse-button").className += " pulse-active";
 
-            var d = document.getElementById('pulse-button');
-            d.style.position = "absolute";
-            d.style.left = e.pageX-15+'px';
-            d.style.top = e.pageY-15+'px';
+        var d = document.getElementById('pulse-button');
+        d.style.position = "absolute";
+        d.style.left = e.pageX - 15 + 'px';
+        d.style.top = e.pageY - 15 + 'px';
     });
 
-    $(document).dblclick(function(e) {
-            document.getElementById("pulse-button").className += " pulse-pause hidden";
+    $(document).dblclick(function (e) {
+        document.getElementById("pulse-button").className += " pulse-pause hidden";
     });
 </script>
 
