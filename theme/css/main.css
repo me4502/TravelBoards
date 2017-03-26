@@ -22,6 +22,18 @@ body {
     border: solid #D32F2F 1px;
 }
 
+.cloud-item {
+    width: auto !important;
+    height: 160px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.cloud-row {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 a {
     color: #00BCD4 !important;
 }
