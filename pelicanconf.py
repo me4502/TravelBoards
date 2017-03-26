@@ -32,7 +32,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = False
 
 DIRECT_TEMPLATES = ['index', 'people', 'map', 'budget', 'timeline',
-                    'itinerary', 'xp-category', 'xp-choose', 'cloud']
+                    'itinerary', 'xp-choose', 'cloud']
 
 THEME = "theme"
 
