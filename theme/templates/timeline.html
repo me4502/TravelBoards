@@ -40,7 +40,8 @@
             <p>20</p>
             <p>Mon</p>
         </div>
-        <div class="col s1 timeline-box hoverable">
+        <div class="col s1 timeline-box hoverable"
+             onclick="$('#tue-modal').modal('open');">
             <p>21</p>
             <p>Tue</p>
         </div>
@@ -59,6 +60,18 @@
             <h4>Friday the 17th</h4>
             <p>3rd day of a 7 day cruise from Punta Arenas to Antarctica</p>
             <img src="theme/img/cruise_snow.jpg" class="full-width">
+        </div>
+        <div class="modal-footer">
+            <a href="#"
+               class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="tue-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Tuesday the 21st</h4>
+            <p>Final day of a 7 day cruise from Punta Arenas to Antarctica. Disembarking at 3PM</p>
+            <img src="theme/img/penguins.jpg" class="full-width">
         </div>
         <div class="modal-footer">
             <a href="#"
