@@ -27,12 +27,15 @@ body {
     height: 160px;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    align-content: center;
+    margin: 0 auto !important;
 }
 
 .cloud-row {
     margin: 0 auto !important;
     align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
 }
 
 a {
