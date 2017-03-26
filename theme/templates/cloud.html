@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class='row cloud-row'>
+    <div class='row cloud-row full-width'>
         {% for item in CLOUD_PHOTOS %}
             <img src="theme/img/{{ item }}" class="full-width cloud-item" onclick="$('#{{ loop.index }}_modal').modal('open');">
         {% endfor %}
