@@ -4,12 +4,29 @@
 
 <style>
     body {
-        background-image: url('theme/img/sea-sunset-holiday-vacation.jpg') !important;
+        background: url('theme/img/sea-sunset-holiday-vacation.jpg') no-repeat center center fixed !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+    }
+
+    img.logo {
+        fill: #D32F2F !important;
     }
 </style>
 
 {% endblock head %}
 
 {% block content %}
-    
+
+    <div class="row card hoverable our-title">
+        <span class="card-title map">Tap to Start</span>
+    </div>
+
+    <script>
+    document.body.addEventListener('click', function() {
+        window.location.href = "map.html";
+    }, true);
+    </script>
 {% endblock content %}
