@@ -35,7 +35,8 @@
 <div class="row">
     <div class="col s4">
         <div class="card hoverable">
-            <div class="card-content center-align">
+            <div style="background-image: url('theme/img/value.png'); background-size:100%;"
+                 class="box-text-bg card-content center-align">
                 <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
                 <br><br>
                 <p>Value</p>
@@ -47,7 +48,8 @@
     </div>
     <div class="col s4">
         <div class="card hoverable">
-            <div class="card-content center-align">
+            <div style="background-image: url('theme/img/moderate.jpg'); background-size:100%;"
+                 class="box-text-bg card-content center-align">
                 <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
                     class="fa fa-usd fa-3x" aria-hidden="true"></i>
                 <br><br>
@@ -60,7 +62,8 @@
     </div>
     <div class="col s4">
         <div class="card hoverable">
-            <div class="card-content center-align">
+            <div style="background-image: url('theme/img/luxury.jpg'); background-size:100%;"
+                 class="box-text-bg card-content center-align">
                 <i class="fa fa-usd fa-3x" aria-hidden="true"></i><i
                     class="fa fa-usd fa-3x" aria-hidden="true"></i><i
                     class="fa fa-usd fa-3x" aria-hidden="true"></i>
@@ -90,15 +93,23 @@
 
 <script>
     var delay = 800;
-    $(document).ready(function() {
-        $("a[id=luxury]").click(function(event){
-            $("#moderate, #value").parent().parent().fadeOut(delay, function(){ $(this).remove();});
+    var delay2 = 400;
+    var opacity = 0.4;
+
+    $(document).ready(function () {
+        $("a[id=luxury]").click(function (event) {
+            $("#moderate, #value").parent().parent().fadeTo(delay, opacity);
+            $("#luxury").parent().parent().fadeTo(delay2, 1);
         });
-        $("a[id=moderate]").click(function(event){
-            $("#luxury, #value").parent().parent().fadeOut(delay, function(){ $(this).remove();});
+
+        $("a[id=moderate]").click(function (event) {
+            $("#luxury, #value").parent().parent().fadeTo(delay, opacity);
+            $("#moderate").parent().parent().fadeTo(delay2, 1);
         });
-        $("a[id=value]").click(function(event){
-            $("#moderate, #luxury").parent().parent().fadeOut(delay, function(){ $(this).remove();});
+
+        $("a[id=value]").click(function (event) {
+            $("#moderate, #luxury").parent().parent().fadeTo(delay, opacity);
+            $("#value").parent().parent().fadeTo(delay2, 1);
         });
     });
 </script>
