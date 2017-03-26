@@ -73,4 +73,32 @@
     </button>
 </div>
 
+<script>
+    var delay = 800;
+    var delay2 = 400;
+    var opacity = 0.4;
+
+    $(document).ready(function () {
+        $("a[id=packages]").click(function (event) {
+            $("#flights, #cruises, #activities").parent().parent().fadeTo(delay, opacity);
+            $("#packages").parent().parent().fadeTo(delay2, 1);
+        });
+
+        $("a[id=flights]").click(function (event) {
+            $("#packages, #cruises, #activities").parent().parent().fadeTo(delay, opacity);
+            $("#flights").parent().parent().fadeTo(delay2, 1);
+        });
+
+        $("a[id=cruises]").click(function (event) {
+            $("#flights, #packages, #activities").parent().parent().fadeTo(delay, opacity);
+            $("#cruises").parent().parent().fadeTo(delay2, 1);
+        });
+
+        $("a[id=activities]").click(function (event) {
+            $("#flights, #cruises, #packages").parent().parent().fadeTo(delay, opacity);
+            $("#activities").parent().parent().fadeTo(delay2, 1);
+        });
+    });
+</script>
+
 {% endblock content %}
